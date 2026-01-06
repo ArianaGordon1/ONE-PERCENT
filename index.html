@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONE PERCENT</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #050505;
+      --gold: #c9a24d;
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0b0b0b, #000);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* NAV */
+    nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 2rem 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    nav .logo {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.2em;
+      font-size: 0.9rem;
+      color: var(--gold);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 3rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* HERO */
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eagle-bg {
+      position: absolute;
+      inset: 0;
+      background: url('./assets/eagle.png') center/50% no-repeat;
+      opacity: 0.06;
+      filter: blur(1px);
+      z-index: 1;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: 0.3em;
+      color: var(--gold);
+    }
+
+    .hero p {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 8rem 8vw;
+    }
+
+    .manifesto {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .manifesto h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      letter-spacing: 0.15em;
+    }
+
+    .manifesto p {
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+
+    .divider {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 4rem auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 3rem;
+    }
+
+    .card {
+      border: 1px solid rgba(201,162,77,0.15);
+      padding: 3rem 2rem;
+    }
+
+    .card h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 0.12em;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 5rem 8vw;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      letter-spacing: 0.25em;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* NOISE */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"120\" height=\"120\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\" stitchTiles=\"stitch\"/></filter><rect width=\"120\" height=\"120\" filter=\"url(%23n)\" opacity=\"0.03\"/></svg>');
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="eagle-bg"></div>
+
+  <nav>
+    <div class="logo">ONE PERCENT</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="store.html">Store</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>ONE PERCENT</h1>
+    <p>Most won’t make it · Exclusivity is intentional</p>
+  </div>
+</header>
+
+<section>
+  <div class="manifesto">
+    <h2>The Standard</h2>
+    <p>
+      ONE PERCENT is not built for mass appeal.  
+      It is designed for discipline, restraint, and those who move with intent.
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Access</h3>
+        <p>Availability is limited by design.</p>
+      </div>
+      <div class="card">
+        <h3>Design</h3>
+        <p>Every element serves a purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Legacy</h3>
+        <p>We create for permanence, not trends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>ONE PERCENT · EST. 2026</p>
+</footer>
+
+</body>
+</html>

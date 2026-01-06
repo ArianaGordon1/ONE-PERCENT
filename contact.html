@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ONE PERCENT — Contact</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #c9a24d;
+      --black: #050505;
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.55);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: radial-gradient(circle at top, #0b0b0b, #000);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 2rem 6vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    nav .logo {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-left: 2.5rem;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    /* HERO */
+    header {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .eagle-bg {
+      position: absolute;
+      inset: 0;
+      background: url('./assets/eagle.png') center/45% no-repeat;
+      opacity: 0.05;
+      filter: blur(1.5px);
+      animation: eagleFloat 18s ease-in-out infinite;
+    }
+
+    @keyframes eagleFloat {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .contact-hero {
+      position: relative;
+      z-index: 3;
+      max-width: 700px;
+    }
+
+    .contact-hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      animation: fadeUp 1.6s ease forwards;
+    }
+
+    .contact-hero p {
+      font-size: 0.95rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.8;
+      animation: fadeUp 2.2s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* CONTACT SECTION */
+    section {
+      padding: 10rem 8vw 6rem;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 520px;
+      margin: auto;
+      border: 1px solid rgba(201,162,77,0.15);
+      padding: 4rem 3rem;
+      animation: glowPulse 6s ease-in-out infinite;
+    }
+
+    @keyframes glowPulse {
+      0%,100% { box-shadow: 0 0 0 rgba(201,162,77,0); }
+      50% { box-shadow: 0 0 40px rgba(201,162,77,0.12); }
+    }
+
+    .contact-box h2 {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .contact-box p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-box a {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 1rem 2.5rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      transition: all 0.4s ease;
+    }
+
+    .contact-box a:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    footer {
+      padding: 4rem 8vw;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    footer p {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+    }
+
+    /* NOISE */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="120" height="120" filter="url(%23n)" opacity="0.03"/></svg>');
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">ONE PERCENT</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="store.html">Store</a>
+    <a href="events.html">Events</a>
+  </div>
+</nav>
+
+<header>
+  <div class="eagle-bg"></div>
+  <div class="contact-hero">
+    <h1>CONTACT</h1>
+    <p>Most won’t make it.<br>Exclusivity is intentional.</p>
+  </div>
+</header>
+
+<section>
+  <div class="contact-box">
+    <h2>Access Only</h2>
+    <p>
+      ONE PERCENT does not operate on volume.
+      <br><br>
+      Serious inquiries only.
+    </p>
+    <a href="mailto:contact@onepercent.com">Request Access</a>
+  </div>
+</section>
+
+<footer>
+  <p>ONE PERCENT · EST. 2026</p>
+</footer>
+
+</body>
+</html>
